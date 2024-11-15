@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FzBz.Api", "FZBZAPI\FzBz.Api.csproj", "{17D6096D-2F96-4737-ABE2-6E98F37BC1B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FzBz.Domain", "FzBz.Domain\FzBz.Domain.csproj", "{3AF34F48-F210-417E-BBBD-8406DABCA9CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FzBz.Tests", "FzBz.Tests\FzBz.Tests.csproj", "{2EA9BB1E-78A8-4D18-AEA9-EAE1FD945874}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17D6096D-2F96-4737-ABE2-6E98F37BC1B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17D6096D-2F96-4737-ABE2-6E98F37BC1B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17D6096D-2F96-4737-ABE2-6E98F37BC1B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17D6096D-2F96-4737-ABE2-6E98F37BC1B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AF34F48-F210-417E-BBBD-8406DABCA9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF34F48-F210-417E-BBBD-8406DABCA9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF34F48-F210-417E-BBBD-8406DABCA9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF34F48-F210-417E-BBBD-8406DABCA9CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA9BB1E-78A8-4D18-AEA9-EAE1FD945874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA9BB1E-78A8-4D18-AEA9-EAE1FD945874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA9BB1E-78A8-4D18-AEA9-EAE1FD945874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA9BB1E-78A8-4D18-AEA9-EAE1FD945874}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DD16094-6D69-4079-90E0-61780B4EF0E9}
+	EndGlobalSection
+EndGlobal
