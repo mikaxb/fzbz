@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FzBz.Api", "FZBZAPI\FzBz.Api.csproj", "{17D6096D-2F96-4737-ABE2-6E98F37BC1B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FzBz.Api", "FZBZAPI\FzBz.Api.csproj", "{17D6096D-2F96-4737-ABE2-6E98F37BC1B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FzBz.Domain", "FzBz.Domain\FzBz.Domain.csproj", "{3AF34F48-F210-417E-BBBD-8406DABCA9CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FzBz.Domain", "FzBz.Domain\FzBz.Domain.csproj", "{3AF34F48-F210-417E-BBBD-8406DABCA9CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FzBz.Tests", "FzBz.Tests\FzBz.Tests.csproj", "{2EA9BB1E-78A8-4D18-AEA9-EAE1FD945874}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FzBz.Tests", "FzBz.Tests\FzBz.Tests.csproj", "{2EA9BB1E-78A8-4D18-AEA9-EAE1FD945874}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
