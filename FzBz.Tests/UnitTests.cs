@@ -20,7 +20,7 @@ public class UnitTests
     }
 
     [Theory]
-    [MemberData(nameof(KnownNumbersAnsResults))]
+    [MemberData(nameof(KnownNumbersAndResults))]
     public void TestKnownNumbers(NumbersAndResult knownNumbersAndResults)
     {
         var logger = new TestLogger<FzBzService>();
@@ -37,7 +37,7 @@ public class UnitTests
         Assert.Equal(duplicateCount, logger.Entries.Count);
     }
 
-    public static IEnumerable<object[]> KnownNumbersAnsResults()
+    public static IEnumerable<object[]> KnownNumbersAndResults()
     {
         yield return new object[] { new NumbersAndResult([1, 2, 3, 4, 5], new Dictionary<int, string> { { 1, 1.ToString() }, { 2, 2.ToString() }, { 3, StringDefinitions.FIZZ }, { 4, 4.ToString() }, { 5, StringDefinitions.BUZZ } }) };
         yield return new object[] { new NumbersAndResult([15], new Dictionary<int, string> { { 15, StringDefinitions.FIZZ + StringDefinitions.BUZZ } }) };
