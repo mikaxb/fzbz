@@ -1,5 +1,5 @@
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0-alpine AS build
 
 COPY . /.
 
@@ -9,7 +9,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS final
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-alpine AS final
 USER app
 WORKDIR /app
 EXPOSE 8080
