@@ -1,9 +1,13 @@
+using FzBz.Domain;
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddFzBz();
 
 var app = builder.Build();
 
@@ -16,29 +20,19 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
 
-app.MapGet("/weatherforecast", () =>
+app.MapGet("/single/{number}", ([FromRoute] int number, [FromServices] IFzBzService fzbzService) =>
 {
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+    return fzbzService.GetResult([number])[number];
 })
-.WithName("GetWeatherForecast")
+.WithName("GetSingleNumber")
+.WithOpenApi();
+
+app.MapGet("/array", ([FromQuery] int[] n, [FromServices] IFzBzService fzbzService) =>
+{
+    return fzbzService.GetResult(n);
+})
+.WithName("GetArray")
 .WithOpenApi();
 
 app.Run();
-
-internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
